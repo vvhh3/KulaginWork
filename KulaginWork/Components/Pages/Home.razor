@@ -6,10 +6,12 @@
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
-<h1 style="@StyleColorDateTime.GetColor(DateTime.Now)">Сейчас на сервере @DateTimeService.GetDateTime().ToString("HH:MM:ss")</h1>
+<h1 style="@StyleColorDateTime.GetColor(DateTime.Now); font-size:@($"{Ran}px")">Сейчас на сервере @DateTimeService.GetDateTime().ToString("HH:MM:ss")</h1>
 Welcome to your new app.
+<input type="range" @bind="Ran"/>
 
 @code{
+    public int Ran { get; set; } = 0;
     protected override void OnInitialized()
     {
         Task.Run(RefreshDate);

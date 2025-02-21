@@ -6,11 +6,11 @@ public class StyleColorDateTime
     {
         if (DateTime.Now.Second %2 != 0)
         {
-        return "background-color:gray";
+            return "background-color:red";
         }
         else
         {
-            return "background-color:yellow";
+            return "background-color:green";
         }
     }
 }
