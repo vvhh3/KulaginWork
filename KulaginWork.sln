@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KulaginWork", "KulaginWork\KulaginWork.csproj", "{78C8DD14-F0C8-4675-903D-063511B03561}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78C8DD14-F0C8-4675-903D-063511B03561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C8DD14-F0C8-4675-903D-063511B03561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C8DD14-F0C8-4675-903D-063511B03561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C8DD14-F0C8-4675-903D-063511B03561}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
