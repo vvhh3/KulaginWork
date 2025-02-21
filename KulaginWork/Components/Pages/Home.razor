@@ -1,8 +1,27 @@
 ﻿@page "/"
 @using KulaginWork.Services
 @inject DateTimeService DateTimeService
+@inject StyleColorDateTime StyleColorDateTime
+@rendermode InteractiveServer
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
-<h1>Сейчас на сервере @DateTimeService.GetDateTime()</h1>
+<h1 style="@StyleColorDateTime.GetColor(DateTime.Now)">Сейчас на сервере @DateTimeService.GetDateTime().ToString("HH:MM:ss")</h1>
 Welcome to your new app.
+
+@code{
+    protected override void OnInitialized()
+    {
+        Task.Run(RefreshDate);
+    }
+    
+    public async Task RefreshDate()
+    {
+        while (true)
+        {
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(1000);
+        }
+    }
+    
+}

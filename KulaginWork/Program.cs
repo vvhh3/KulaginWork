@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 builder.Services.AddSingleton<DateTimeService>();
+builder.Services.AddSingleton<StyleColorDateTime>();
 
 var app = builder.Build();
 
