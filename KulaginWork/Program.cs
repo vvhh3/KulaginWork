@@ -8,6 +8,8 @@ builder.Services.AddRazorComponents().AddInteractiveServerComponents();
 
 builder.Services.AddSingleton<DateTimeService>();
 builder.Services.AddSingleton<StyleColorDateTime>();
+builder.Services.AddSingleton<AuthProvider>();
+builder.Services.AddSingleton<PermissionProvider>();
 
 var app = builder.Build();
 

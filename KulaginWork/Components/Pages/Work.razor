@@ -1,0 +1,38 @@
+﻿@page "/Work"
+@using KulaginWork.Models
+@using KulaginWork.Services
+@rendermode InteractiveServer
+@inject AuthProvider AuthProvider 
+@inject PermissionProvider PermissionProvider
+<h3>Work</h3>
+
+
+<form>
+    <input placeholder="Login" @bind="InputLogin"/>
+    <input placeholder="Password" @bind="InputPassword"/>
+    <button @onclick="Auth1">Нажми</button>
+</form>
+@if( user == Rolles.Admin)
+{
+    @page "/weather"
+}
+@* @if (PermissionProvider.IsCanViewPageSettings(AuthProvider.GetCurrentUser())) *@
+@* { *@
+@*     <h1>Hello, world!</h1>  *@
+@* } *@
+
+@code {
+    Rolles user = Rolles.User;
+    public string InputLogin { get; set; }
+    public string InputPassword { get; set; }
+    public string hr { get; set; }
+    
+    public void Auth1()
+    {
+        if (InputLogin == "Hi" && InputPassword == "123")
+        {
+            Rolles user = Rolles.Admin;
+        }
+    }
+
+}
